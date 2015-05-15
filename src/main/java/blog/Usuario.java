@@ -1,6 +1,7 @@
 package blog;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +20,8 @@ public class Usuario {
 	private String apellidos;
 	private Date fechaNac;
 	private String email;
-	
+	private List<Cita> citas;
+
 	public Usuario(){}
 	public Usuario(long dni,String tarjetaSocio,String nombre,String apellidos,Date fecha,String email){
 		setDNI(dni);
@@ -52,5 +54,8 @@ public class Usuario {
 	}
 	public void pedirCita(Medico medico,Date fecha){
 		
+	}
+	public List<Cita> getCitas(){
+		return citas;
 	}
 }
