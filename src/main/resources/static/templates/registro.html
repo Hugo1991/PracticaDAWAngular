@@ -1,4 +1,4 @@
-<div>
+<div ng-app>
 <!-- Fixed navbar -->
 	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
 	      <div class="container">
@@ -16,7 +16,7 @@
                     <li class="active"><a href="#home" class="smothscroll">Home</a></li>
   		            <li><a href="#desc" class="smothscroll">Descripci&oacuten</a></li>
   		            <li><a href="#cita" class="smothScroll">Citas</a></li>
-                    <li><a href="#showcase" class="smothScroll">Centros médicos</a></li>
+                    <li><a href="#showcase" class="smothScroll">Centros mï¿½dicos</a></li>
   		            <li><a href="#frec" class="smothScroll">Preguntas frecuentes</a></li>
                     <li><a href="#contact" class="smothScroll">Contact</a></li>
                     <li><a href="#registro" class="smothScroll">Mi NoInsane</a></li>
@@ -28,7 +28,7 @@
 	<div id="footerwrap">
 		<div class="container">
 			<div class="col-lg-5">
-				<h3>¿A&uacuten no te has registrado en NoInsane?</h3>
+				<h3>ï¿½A&uacuten no te has registrado en NoInsane?</h3>
 				<p>
 				Si eres cliente de NoInsane<br/>
 				Entra y disfruta<br/>
@@ -41,21 +41,29 @@
 				<form role="form" action="#" method="post" enctype="plain"> 
 				  <div class="form-group">
 				    <label for="name1">Tu DNI:</label>
-				    <input type="DNI" name="DNI" class="form-control" id="name1" placeholder="Tu DNI">
+				    <input type="DNI" name="DNI" class="form-control" id="inputDNI" placeholder="Tu DNI" ng-model="Usuario.dni" required>
 				  </div>
 				  <div class="form-group">
 				    <label for="email1">Contrase&ntildea:</label>
-				    <input type="pass" name="pass" class="form-control" id="email1" placeholder="Introduce pass">
+				    <input type="pass" name="pass" class="form-control" id="inputPassword" placeholder="Introduce pass" ng-model="Usuario.password"  required>
+				  <div mg-show="forma.inputDNI.$dirty && forma.inputPassword.$invalid">
+				  	<p class="help-block text-danger" ng-show="forma.inputDNI.$error.required">Campo obligatorio</p>
+				  	<p class="help-block text-danger" ng-show="forma.inputPassword.$error.required">Campo obligatorio</p>
+				  </div>
+				  <div class="checkbox">
+				  	<label>
+				  		<input type="checkbox" name="aceptoU" ng-model="usuario.acepto" required>Acepto.
+				  	</label>
 				  </div>
 				  <br>
-				  <button type="submit" class="btn btn-large btn-success">ENTRAR</button>
+				  <button type="submit" class="btn btn-large btn-success" ng-disabled="forma.$invalid">ENTRAR</button>
 				</form>
 			</div>
 		</div>
 	</div>
 	<div id="c">
 		<div class="container">
-			<p>Created by <a href="http://www.blacktie.co">Cruz Héctor Fernández, Ignacio de Lucas, Hugo Fernández</a></p>
+			<p>Created by <a href="http://www.blacktie.co">Cruz Hï¿½ctor Fernï¿½ndez, Ignacio de Lucas, Hugo Fernï¿½ndez</a></p>
 		
 		</div>
 	</div>
