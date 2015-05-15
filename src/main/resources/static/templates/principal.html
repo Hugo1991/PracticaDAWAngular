@@ -117,6 +117,7 @@
 		                </div><!-- /accordion-group -->
 		                <br>
 		
+					
 		                <div class="accordion-group">
 		                    <div class="accordion-heading">
 		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
@@ -132,6 +133,7 @@
 								</div><!-- /accordion-inner -->
 		                    </div><!-- /collapse -->
 		                </div><!-- /accordion-group -->
+		                
 		                <br>
 		
 		                 
@@ -237,33 +239,38 @@
 	<div id="footerwrap">
 		<div class="container">
 			<div class="col-lg-5">
-				<h3>Address</h3>
+				<h3>�A&uacuten no te has registrado en NoInsane?</h3>
 				<p>
-				Av. Greenville 987,<br/>
-				New York,<br/>
-				90873<br/>
-				United States
-				</p>
+				Si eres cliente de NoInsane entra y<br/>
+				disfruta de nuestras ventajas<br/>
+				Si no lo eres registrate ya.<br/>
+				<button type="submit" class="btn btn-large btn-success" ng-disabled="forma.$invalid">REGISTRATE</button>
 			</div>
 			
 			<div class="col-lg-7">
-				<h3>Drop Us A Line</h3>
+				<h3>Entra con tu cuenta</h3>
 				<br>
 				<form role="form" action="#" method="post" enctype="plain"> 
 				  <div class="form-group">
-				    <label for="name1">Your Name</label>
-				    <input type="name" name="Name" class="form-control" id="name1" placeholder="Your Name">
+				    <label for="name1">Tu DNI:</label>
+				    <input type="DNI" name="DNI" class="form-control" id="inputDNI" placeholder="Tu DNI" ng-model="Usuario.dni" required>
 				  </div>
 				  <div class="form-group">
-				    <label for="email1">Email address</label>
-				    <input type="email" name="Mail" class="form-control" id="email1" placeholder="Enter email">
+				    <label for="email1">Contrase&ntildea:</label>
+				    <input type="pass" name="pass" class="form-control" id="inputPassword" placeholder="Introduce pass" ng-model="Usuario.password"  required>
+				  <div mg-show="registro.inputDNI.$dirty && registro.inputPassword.$invalid">
+				  	<p class="help-block text-danger" ng-show="registro.inputDNI.$error.required">Campo obligatorio</p>
+				  	<p class="help-block text-danger" ng-show="registro.inputPassword.$error.required">Campo obligatorio</p>
 				  </div>
-				  <div class="form-group">
-				  	<label>Your Text</label>
-				  	<textarea class="form-control" name="Message" rows="3"></textarea>
+				  <div class="checkbox">
+				  	<label>
+				  		<input type="checkbox" name="aceptoU" ng-model="usuario.acepto" required>Acepto.
+				  	</label>
 				  </div>
 				  <br>
-				  <button type="submit" class="btn btn-large btn-success">SUBMIT</button>
+				  <div ng-controller="boton">
+				  <button id="botonlog" ng-click="loguear()"class="btn btn-large btn-success" ng-disabled="forma.$invalid">ENTRAR</button>
+				</div>
 				</form>
 			</div>
 		</div>
@@ -274,7 +281,7 @@
 		
 		</div>
 	</div>
-      
+     
 
 
     <!-- Bootstrap core JavaScript
