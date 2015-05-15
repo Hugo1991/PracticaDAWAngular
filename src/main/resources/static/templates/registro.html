@@ -1,4 +1,4 @@
-<div >
+<div ng-app>
 <!-- Fixed navbar -->
 	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
 	      <div class="container">
@@ -47,8 +47,8 @@
 				    <label for="email1">Contrase&ntildea:</label>
 				    <input type="pass" name="pass" class="form-control" id="inputPassword" placeholder="Introduce pass" ng-model="Usuario.password"  required>
 				  <div mg-show="forma.inputDNI.$dirty && forma.inputPassword.$invalid">
-				  	<p class="help-block text-danger" ng-show="registro.inputDNI.$error.required">Campo obligatorio</p>
-				  	<p class="help-block text-danger" ng-show="registro.inputPassword.$error.required">Campo obligatorio</p>
+				  	<p class="help-block text-danger" ng-show="forma.inputDNI.$error.required">Campo obligatorio</p>
+				  	<p class="help-block text-danger" ng-show="forma.inputPassword.$error.required">Campo obligatorio</p>
 				  </div>
 				  <div class="checkbox">
 				  	<label>
@@ -56,7 +56,7 @@
 				  	</label>
 				  </div>
 				  <br>
-				  <button type="submit" class="btn btn-large btn-success" ng-disabled="registro.$invalid">ENTRAR</button>
+				  <button type="submit" class="btn btn-large btn-success" ng-disabled="forma.$invalid">ENTRAR</button>
 				</form>
 			</div>
 		</div>

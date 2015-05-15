@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Cita {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer idCita;
+	private long idCita;
 	
 	/*private Usuario usuario;
 	private Medico medico;
