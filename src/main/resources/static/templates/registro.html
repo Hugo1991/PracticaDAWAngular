@@ -1,4 +1,5 @@
-<div ng-app>
+
+<div ng-app="myFacebookApp">
 <!-- Fixed navbar -->
 	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
 	      <div class="container">
@@ -8,59 +9,32 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#"><b>NoInsane</b></a>
+	          <a class="navbar-brand" href="#home"><b>NoInsane</b></a>
 	        </div>
 	        <div class="navbar-collapse collapse">
 	          
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#home" class="smothscroll">Home</a></li>
+                    <li><a href="#home" class="smothscroll">Home</a></li>
   		            <li><a href="#desc" class="smothscroll">Descripci&oacuten</a></li>
   		            <li><a href="#cita" class="smothScroll">Citas</a></li>
                     <li><a href="#showcase" class="smothScroll">Centros mï¿½dicos</a></li>
   		            <li><a href="#frec" class="smothScroll">Preguntas frecuentes</a></li>
                     <li><a href="#contact" class="smothScroll">Contact</a></li>
-                    <li><a href="#registro" class="smothScroll">Mi NoInsane</a></li>
+                    <li class="active"><a href="#registro" class="smothScroll">Mi NoInsane</a></li>
   		
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </div>
-<section id="registro" name="registro">
+<section id="registro" name="registro"></section>
 	<div id="footerwrap">
 		<div class="container">
 			<div class="col-lg-5">
-				<h3>¿A&uacuten no te has registrado en NoInsane?</h3>
+				<h3>&A&uacuten no te has registrado en NoInsane?</h3>
 				<p>
-				Si eres cliente de NoInsane entra y<br/>
-				disfruta de nuestras ventajas<br/>
-				Si no lo eres reg&iacutestrate ya.<br/>
-<button class="btn btn-default" data-toggle="modal" data-target="#popupregistro">Reg&iacutestrate</button>			</div>
-
-			<div class="modal fade" id="popupregistro" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
-				<div class="modal-dialog"> <div class="modal-content"> 
-					<div class="modal-header"> 
-						<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button> 
-							<h4 class="modal-title" id="myModalLabel">Crea tu usuario</h4> </div> 
-			<div id="nuevoUsuario" class="modal-body"> 
-			<form role="form"> 
-				<div class="form-group"> 
-					<label for="DNIregistro">DNI</label> 
-					<input type="text" class="form-control" id="DNIregistro"placeholder="Introduce tu DNI..." required> </div> 
-					<div class="form-group"> 
-						<label for="contra">Contraseña</label> 
-					<input type="password" class="form-control" id="contra" placeholder="Introduce una contraseña secreta..." required>
-			  		</div> 
-			  		<div class="form-group"> 
-			  			<label for="email">Correo</label> 
-			  			<input type="email" class="form-control" id="email" placeholder="Introduce tu correo electr&oacutenico" required> 
-			  		</div>  
-			  </form>  
-			  </div> 
-			  <div class="modal-footer"> 
-			  	<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
-			  	<button type="button" class="btn btn-success" id="botoncrearusuario">Crear</button>  
-			  	</div> 
-			  	</div> </div> </div>
+				Si eres cliente de NoInsane<br/>
+				Entra y disfruta<br/>
+				de nuestras ventajas<br/>
+			</div>
 			
 			<div class="col-lg-7">
 				<h3>Entra con tu cuenta</h3>
@@ -73,9 +47,9 @@
 				  <div class="form-group">
 				    <label for="email1">Contrase&ntildea:</label>
 				    <input type="pass" name="pass" class="form-control" id="inputPassword" placeholder="Introduce pass" ng-model="Usuario.password"  required>
-				  <div mg-show="registro.inputDNI.$dirty && registro.inputPassword.$invalid">
-				  	<p class="help-block text-danger" ng-show="registro.inputDNI.$error.required">Campo obligatorio</p>
-				  	<p class="help-block text-danger" ng-show="registro.inputPassword.$error.required">Campo obligatorio</p>
+				  <div ng-show="forma.inputDNI.$dirty && forma.inputPassword.$invalid">
+				  	<p class="help-block text-danger" ng-show="forma.inputDNI.$error.required">Campo obligatorio</p>
+				  	<p class="help-block text-danger" ng-show="forma.inputPassword.$error.required">Campo obligatorio</p>
 				  </div>
 				  <div class="checkbox">
 				  	<label>
@@ -83,17 +57,27 @@
 				  	</label>
 				  </div>
 				  <br>
-				  <div ng-controller="boton">
-				  <button id="botonlog" ng-click="loguear()"class="btn btn-large btn-success" ng-disabled="forma.$invalid">ENTRAR</button>
-				</div>
+				  <button type="submit" class="btn btn-large btn-success" ng-disabled="forma.$invalid">ENTRAR</button>
+					
 				</form>
+				<a href=# id="loginFB" class="btn btn-primary">iniciar sesion fb</a>
+					<script>
+						  (function(d, s, id) {
+						    var js, fjs = d.getElementsByTagName(s)[0];
+						    if (d.getElementById(id)) return;
+						    js = d.createElement(s); js.id = id;
+						    js.src = "//connect.facebook.net/en_US/sdk.js";
+						    fjs.parentNode.insertBefore(js, fjs);
+						  }(document, 'script', 'facebook-jssdk'));
+					 </script>
 			</div>
 		</div>
 	</div>
+	
 	<div id="c">
 		<div class="container">
-			<p>Created by <a href="http://www.blacktie.co">Cruz H&eacutector Fern&aacutendez, Ignacio de Lucas, Hugo Fern&aacutendez y Randal  Barrientos</a></p>
+			<p>Created by <a href="http://www.blacktie.co">Cruz Hï¿½ctor Fernï¿½ndez, Ignacio de Lucas, Hugo Fernï¿½ndez</a></p>
 		
 		</div>
 	</div>
-     </section>
+</div>
