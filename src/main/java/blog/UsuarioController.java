@@ -20,13 +20,13 @@ public class UsuarioController {
 	private UsuarioRepository usuarioRepository;
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Usuario> addPost(@RequestBody Usuario usuario) {
+	public ResponseEntity<Usuario> addUser(@RequestBody Usuario usuario) {
 		usuarioRepository.save(usuario);		
 		return new ResponseEntity<>(usuario,HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void deleteItem(@PathVariable Integer id) {
+	public void deleteUser(@PathVariable Integer id) {
 		usuarioRepository.delete(id);
 	}
 

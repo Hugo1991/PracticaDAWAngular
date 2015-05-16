@@ -20,13 +20,13 @@ public class MedicoController {
 	private MedicoRepository medicoRepository;
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Medico> addPost(@RequestBody Medico medico) {
+	public ResponseEntity<Medico> addMedico(@RequestBody Medico medico) {
 		medicoRepository.save(medico);		
 		return new ResponseEntity<>(medico,HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void deleteItem(@PathVariable Integer id) {
+	public void deleteMedico(@PathVariable Integer id) {
 		medicoRepository.delete(id);
 	}
 

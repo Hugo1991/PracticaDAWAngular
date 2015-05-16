@@ -20,13 +20,13 @@ public class HospitalController {
 	private HospitalRepository hospitalRepository;
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Hospital> addPost(@RequestBody Hospital hospital) {
+	public ResponseEntity<Hospital> addHospital(@RequestBody Hospital hospital) {
 		hospitalRepository.save(hospital);		
 		return new ResponseEntity<>(hospital,HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void deleteItem(@PathVariable Integer id) {
+	public void deleteHospital(@PathVariable Integer id) {
 		hospitalRepository.delete(id);
 	}
 

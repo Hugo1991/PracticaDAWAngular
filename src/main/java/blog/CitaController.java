@@ -20,13 +20,13 @@ public class CitaController {
 	private CitaRepository citaRepository;
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Cita> addPost(@RequestBody Cita cita) {
+	public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
 		citaRepository.save(cita);		
 		return new ResponseEntity<>(cita,HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public void deleteItem(@PathVariable Integer id) {
+	public void deleteCita(@PathVariable Integer id) {
 		citaRepository.delete(id);
 	}
 

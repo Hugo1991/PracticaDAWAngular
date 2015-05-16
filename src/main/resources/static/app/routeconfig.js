@@ -14,5 +14,7 @@ function RouteConfig($routeProvider) {
 	$routeProvider.when('/dashboard', { templateUrl : "templates/perfil.html/" });
 	$routeProvider.when('/newpost', { templateUrl : "templates/newpost.html" });
 	$routeProvider.when('/post/:id', { templateUrl : "templates/post.html" });
-
+	$routeProvider.when('/postlist', { templateUrl : "templates/postlist.html" });
+	$routeProvider.when('/user/:id', { templateUrl : "templates/post.html" });
+	$routeProvider.when('/listausers', { templateUrl : "templates/listausers.html" });
 }
