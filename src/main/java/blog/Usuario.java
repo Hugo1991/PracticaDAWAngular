@@ -19,15 +19,18 @@ public class Usuario {
 	private String apellidos;
 	private Date fechaNac;
 	private String email;
+	private String pass;
 	
 	public Usuario(){}
-	public Usuario(long dni,String tarjetaSocio,String nombre,String apellidos,Date fecha,String email){
+	public Usuario(long dni,String tarjetaSocio,String nombre,String apellidos,Date fecha,String email,
+			String pass){
 		setDNI(dni);
 		setTarjetaSocio(tarjetaSocio);
 		setNombre(nombre);
 		setApellidos(apellidos);
 		setFechaNac(fecha);
 		setEmail(email);
+		setPass(pass);
 	}
 	public void setDNI(long dni){}
 	public void setTarjetaSocio(String tarjetaSocio){}
@@ -35,6 +38,7 @@ public class Usuario {
 	public void setApellidos(String apellidos){}
 	public void setFechaNac(Date fecha){}
 	public void setEmail(String email){}
+	public void setPass(String pass){}
 	public Long getDNI(){
 		return DNI;
 	}
@@ -49,6 +53,9 @@ public class Usuario {
 	}
 	public Date getFechaNac(){
 		return fechaNac;
+	}
+	public String getPass(){
+		return pass;
 	}
 	public void pedirCita(Medico medico,Date fecha){
 		

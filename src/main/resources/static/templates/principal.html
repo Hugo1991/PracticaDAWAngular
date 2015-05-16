@@ -16,10 +16,10 @@
                     <li class="active"><a href="#home" class="smothscroll">Home</a></li>
   		            <li><a href="#desc" class="smothscroll">Descripci&oacuten</a></li>
   		            <li><a href="#cita" class="smothScroll">Citas</a></li>
-                    <li><a href="#showcase" class="smothScroll">Centros médicos</a></li>
+                    <li><a href="#showcase" class="smothScroll">Centros m&eacutedicos</a></li>
   		            <li><a href="#frec" class="smothScroll">Preguntas frecuentes</a></li>
-                   
-                    <li><a href="#registro" class="smothScroll">Mi NoInsane</a></li>
+                    <li><a href="#/registro" class="smothScroll">Entrar</a></li>
+                    <li><a href="#/dashboard" class="smothScroll">Mi NoInsane</a></li>
   		
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -47,8 +47,8 @@
 	    		<div class="col-lg-2">
 	    			<br>
 	    			<img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow2.png">
-	    			<h5>Médicos y centros</h5>
-	    			<p>Encuentra tu hospital y médico especialista mas cercano</p>
+	    			<h5>M&eacutedicos y centros</h5>
+	    			<p>Encuentra tu hospital y m&eacutedico especialista mas cercano</p>
 	    		</div>
 	    	</div>
 	    </div> <!--/ .container -->
@@ -109,9 +109,9 @@
 		                    </div><!-- /accordion-heading -->
 		                    <div id="collapseOne" class="accordion-body collapse in">
 		                        <div class="accordion-inner">
-								<p>Consulte las formas de obtener cita previa en Atención Primaria. 
-                                    Desde esta página puede pedir, consultar, cambiar o anular su cita con el médico de Familia,
-                                    Pediatra o profesional de Enfermería.</p>
+								<p>Consulte las formas de obtener cita previa en Atenci&oacuten Primaria. 
+                                    Desde esta p&aacutegina puede pedir, consultar, cambiar o anular su cita con el m&eacutedico de Familia,
+                                    Pediatra o profesional de Enfermer&iacutea.</p>
 								</div><!-- /accordion-inner -->
 		                    </div><!-- /collapse -->
 		                </div><!-- /accordion-group -->
@@ -128,7 +128,7 @@
 		                        <div class="accordion-inner">
 								<p>Consulte las formas de obtener cita previa en Atención Especializada.
                                     Desde esta página puede pedir, consultar, cambiar o anular su cita con el Especialista solicitada
-                                    por su médico de Atención Primaria, con la posibilidad de elegir otro centro sanitario 
+                                    por su m&eacutedico de Atenci&oacuten Primaria, con la posibilidad de elegir otro centro sanitario 
                                     y médico Especialista.</p>
 								</div><!-- /accordion-inner -->
 		                    </div><!-- /collapse -->
@@ -151,7 +151,7 @@
 	<div id="showcase">
 		<div class="container">
 			<div class="row">
-				<h1 class="centered">Centros médicos</h1>
+				<h1 class="centered">Centros m&eacutedicos</h1>
 				<br>
 				<div class="col-lg-8 col-lg-offset-2">
 					<div id="carousel-example-generic" class="carousel slide">
@@ -180,7 +180,7 @@
 		</div><!-- /container -->
 	</div>	
 
-<section id="frec" name="frec"></section>
+<section id="frec" name="frec">
       <!-- FEATURES WRAP -->
 	<div id="features">
 		<div class="container">
@@ -203,8 +203,8 @@
 		                    </div><!-- /accordion-heading -->
 		                 
 		                        <div class="accordion-inner">
-								<p>SÍ. Desde este servicio web también se puede cambiar 
-		una cita  a través de la opción de 'Cambiar cita'.</p>
+								<p>S&Iacute. Desde este servicio web tambi&eacuten se puede cambiar 
+		una cita  a trav&eacutes de la opci&oacuten de 'Cambiar cita'.</p>
 								</div><!-- /accordion-inner -->
 		                   
 		                </div><!-- /accordion-group -->
@@ -213,13 +213,13 @@
 		                <div class="accordion-group">
 		                    <div class="accordion-heading">
 		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-		                        ¿Cómo puedo anular una cita?
+		                        ¿C&oacutemo puedo anular una cita?
 		                        </a>
 		                    </div>
 		                  
 		                        <div class="accordion-inner">
-								<p>Se puede anular desde la opción 'Cambiar o Anular',
-		  o bien a través de la llamada al teléfono de contacto del centro de salud.</p>
+								<p>Se puede anular desde la opci&oacuten 'Cambiar o Anular',
+		  o bien a trav&eacutes de la llamada al teléfono de contacto del centro de salud.</p>
 								</div><!-- /accordion-inner -->
 		                    
 		                </div><!-- /accordion-group -->
@@ -234,18 +234,44 @@
 			</div>
 		</div><!--/ .container -->
 	</div><!--/ #features -->
-      
-	<section id="registro" name="registro"></section>
+      </section>
+	<section id="registro" name="registro">
 	<div id="footerwrap">
 		<div class="container">
 			<div class="col-lg-5">
-				<h3>ï¿½A&uacuten no te has registrado en NoInsane?</h3>
+				<h3>¿A&uacuten no te has registrado en NoInsane?</h3>
 				<p>
 				Si eres cliente de NoInsane entra y<br/>
 				disfruta de nuestras ventajas<br/>
-				Si no lo eres registrate ya.<br/>
-				<button type="submit" class="btn btn-large btn-success" ng-disabled="forma.$invalid">REGISTRATE</button>
-			</div>
+				Si no lo eres reg&iacutestrate ya.<br/>
+<button class="btn btn-default" data-toggle="modal" data-target="#popupregistro">Reg&iacutestrate</button>			</div>
+
+			<div class="modal fade" id="popupregistro" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+				<div class="modal-dialog"> <div class="modal-content"> 
+					<div class="modal-header"> 
+						<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button> 
+							<h4 class="modal-title" id="myModalLabel">Crea tu usuario</h4> </div> 
+			<div id="nuevoUsuario" class="modal-body"> 
+			<form role="form"> 
+				<div class="form-group"> 
+					<label for="DNIregistro">DNI</label> 
+					<input type="text" class="form-control" id="DNIregistro"placeholder="Introduce tu DNI..." required> </div> 
+					<div class="form-group"> 
+						<label for="contra">Contraseña</label> 
+					<input type="password" class="form-control" id="contra" placeholder="Introduce una contraseña secreta..." required>
+			  		</div> 
+			  		<div class="form-group"> 
+			  			<label for="email">Correo</label> 
+			  			<input type="email" class="form-control" id="email" placeholder="Introduce tu correo electr&oacutenico" required> 
+			  		</div>  
+			  </form>  
+			  </div> 
+			  <div class="modal-footer"> 
+			  	<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+			  	<button type="button" class="btn btn-success" id="botoncrearusuario">Crear</button>  
+			  	</div> 
+			  	</div> </div> </div>
 			
 			<div class="col-lg-7">
 				<h3>Entra con tu cuenta</h3>
@@ -277,11 +303,11 @@
 	</div>
 	<div id="c">
 		<div class="container">
-			<p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
+			<p>Created by <a href="http://www.blacktie.co">Cruz H&eacutector Fern&aacutendez, Ignacio de Lucas, Hugo Fern&aacutendez y Randal  Barrientos</a></p>
 		
 		</div>
 	</div>
-     
+     </section>
 
 
     <!-- Bootstrap core JavaScript
